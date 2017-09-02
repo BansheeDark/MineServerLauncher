@@ -1,1 +1,1 @@
-# MineServerLauncher
+# MinecraftServerLauncher
