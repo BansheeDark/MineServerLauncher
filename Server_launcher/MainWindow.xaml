@@ -6,9 +6,11 @@
     xmlns:local="clr-namespace:Server_launcher"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Launcher Server"
-    Width="450"
-    Height="650"
-    ResizeMode="NoResize"
+    MinWidth="450"
+    MinHeight="650"
+    Width="900"
+    Height="700"
+    ResizeMode="CanResize"
     mc:Ignorable="d">
     <Window.Background>
         <ImageBrush ImageSource="Assets/bg_minecraft.jpg" Stretch="UniformToFill" />
@@ -423,7 +425,6 @@
                         x:Name="tx1"
                         Grid.Column="1"
                         Margin="10,0,0,0"
-                        FontSize="9"
                         Loaded="tx1_Loaded"
                         Style="{StaticResource TextBoxSettings}" />
                     <Button
@@ -456,7 +457,7 @@
                         x:Name="tx2"
                         Grid.Column="1"
                         Margin="10,0,0,0"
-                        FontSize="9"
+                        
                         Loaded="tx2_Loaded"
                         Style="{StaticResource TextBoxSettings}" />
                     <Button
@@ -489,7 +490,7 @@
                         x:Name="tx3"
                         Grid.Column="1"
                         Margin="10,0,0,0"
-                        FontSize="9"
+                        
                         Loaded="tx3_Loaded"
                         Style="{StaticResource TextBoxSettings}" />
                     <Button
@@ -522,7 +523,7 @@
                         x:Name="tx4"
                         Grid.Column="1"
                         Margin="10,0,0,0"
-                        FontSize="9"
+                        
                         Loaded="tx4_Loaded"
                         Style="{StaticResource TextBoxSettings}" />
                     <Button
