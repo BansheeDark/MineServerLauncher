@@ -1,18 +1,26 @@
-﻿<Window x:Class="Server_launcher.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Server_launcher"
-        mc:Ignorable="d"
-        Title="Launcher Server" Height="600" Width="450" ResizeMode="NoResize">
-	<Window.Background>
-		<ImageBrush ImageSource="Assets/bg_minecraft.jpg" Stretch="UniformToFill"/>
-	</Window.Background>
-	<Grid>
-		<Grid x:Name="GridHelp" Style="{StaticResource GridHelp}" Margin="60" Background="#CC148214">
-			<StackPanel Margin="5" >
-				<FlowDocumentScrollViewer
+﻿<Window
+    x:Class="Server_launcher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Server_launcher"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Launcher Server"
+    Width="450"
+    Height="650"
+    ResizeMode="NoResize"
+    mc:Ignorable="d">
+    <Window.Background>
+        <ImageBrush ImageSource="Assets/bg_minecraft.jpg" Stretch="UniformToFill" />
+    </Window.Background>
+    <Grid>
+        <Grid
+            x:Name="GridHelp"
+            Margin="60,60,60,90"
+            Background="#CC148214"
+            Style="{StaticResource GridHelp}">
+            <StackPanel Margin="5">
+                <FlowDocumentScrollViewer
                     Margin="0,5,0,0"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Bottom"
@@ -20,213 +28,528 @@
                     Foreground="White"
                     HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Disabled">
-					<FlowDocument>
-						<Paragraph Margin="0,0,0,0" >Для запуска сервера, необходимо выбрать .bat - файл, нажав на соответствующую кнопку.</Paragraph>
-						<Paragraph Margin="0,50,0,0" >Обратная связь:</Paragraph>
-						<Table Margin="5,10,0,0">
-							<Table.Columns>
-								<TableColumn Width="100" />
-								<TableColumn Width="Auto" />
-							</Table.Columns>
-							<TableRowGroup FontSize="14">
-								<TableRow>
-									<TableCell>
-										<Paragraph />
-									</TableCell>
-									<TableCell>
-										<Paragraph />
-									</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>
-										<Paragraph>VK:</Paragraph>
-									</TableCell>
-									<TableCell>
-										<Paragraph>vk.com/bansheedark</Paragraph>
-									</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>
-										<Paragraph>Telegram:</Paragraph>
-									</TableCell>
-									<TableCell>
-										<Paragraph>t.me/danaboldevelopment</Paragraph>
-									</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>
-										<Paragraph>Diskord:</Paragraph>
-									</TableCell>
-									<TableCell>
-										<Paragraph>discord.gg/SyduR8H</Paragraph>
-									</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>
-										<Paragraph>Email:</Paragraph>
-									</TableCell>
-									<TableCell>
-										<Paragraph>nickitakrac@gmail.com</Paragraph>
-									</TableCell>
-								</TableRow>
-							</TableRowGroup>
-						</Table>
-					</FlowDocument>
-				</FlowDocumentScrollViewer>
-			</StackPanel>
-		</Grid>
-		<ToggleButton x:Name="ButtonHelp" Template="{StaticResource ToggleButtonT}" Style="{StaticResource ToggleButtonToolsS}" HorizontalAlignment="Left" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Margin="25,0,0,25">
+                    <FlowDocument>
+                        <Paragraph Margin="0,0,0,0">Для запуска сервера, необходимо выбрать .bat - файл, нажав на соответствующую кнопку.</Paragraph>
+                        <Paragraph Margin="0,50,0,0">Обратная связь:</Paragraph>
+                        <Table Margin="5,10,0,0">
+                            <Table.Columns>
+                                <TableColumn Width="100" />
+                                <TableColumn Width="Auto" />
+                            </Table.Columns>
+                            <TableRowGroup FontSize="14">
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph />
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph />
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>VK:</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>vk.com/bansheedark</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Telegram:</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>t.me/danaboldevelopment</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Diskord:</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>discord.gg/SyduR8H</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Email:</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>nickitakrac@gmail.com</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                            </TableRowGroup>
+                        </Table>
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal">
+            <ToggleButton
+                x:Name="ButtonHelp"
+                Margin="25,0,0,25"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                RenderTransformOrigin="0.5,0.5"
+                Style="{StaticResource ToggleButtonToolsHelpS}"
+                Template="{StaticResource ToggleButtonT}">
 
-			<ToggleButton.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-45"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</ToggleButton.RenderTransform>
-			<TextBlock Style="{StaticResource TextBlockS}" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform/>
-						<RotateTransform Angle="45"/>
-						<TranslateTransform/>
-					</TransformGroup>
-				</TextBlock.RenderTransform>
-				<TextBlock.ToolTip>
-					<ToolTip Background="#90008200">
-						<StackPanel>
-							<TextBlock Margin="3" Foreground="White"><Run Text="Помощь"/></TextBlock>
-						</StackPanel>
-					</ToolTip>
-				</TextBlock.ToolTip>
-				</TextBlock>
+                <ToggleButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-45" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ToggleButton.RenderTransform>
+                <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockHelpS}">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                    <TextBlock.ToolTip>
+                        <ToolTip Background="#90008200">
+                            <StackPanel>
+                                <TextBlock Margin="3" Foreground="White"><Run Text="Помощь" /></TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </TextBlock.ToolTip>
+                </TextBlock>
 
-		</ToggleButton>
-		<Grid Style="{StaticResource GridS}">
-			<TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Width="320" Height="30" Foreground="White" Text="Minecraft Server Launcher" TextAlignment="Center" FontWeight="Bold" FontSize="25.5" Margin="0,100,0,100"/>
-			<Button Template="{StaticResource ButtonT}" Style="{StaticResource ButtonS}" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="Auto" Height="Auto" Click="Button_Click_4">
-				<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10,10,20,10">
-					<Image Source="Assets/blackvariant-button-ui-requests-2-minecraft-1.ico" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Height="90"/>
-					<TextBlock Text="Запуск сервера" Foreground="White" VerticalAlignment="Center"  FontWeight="Bold"  FontSize="26"/>
-				</StackPanel>
-			</Button>
-			<Grid VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            </ToggleButton>
+            <ToggleButton
+                x:Name="ButtonSettings"
+                Margin="25,0,0,25"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                RenderTransformOrigin="0.5,0.5"
+                Style="{StaticResource ToggleButtonToolsSettingsS}"
+                Template="{StaticResource ToggleButtonT}">
 
-				<Button Template="{StaticResource ButtonT}" Style="{StaticResource ButtonToolsS}"  RenderTransformOrigin="0.5,0.5" Margin="0,0,25,25" Click="Button_Click_2">
-					<Button.RenderTransform>
-						<TransformGroup>
-							<ScaleTransform/>
-							<SkewTransform/>
-							<RotateTransform Angle="-45"/>
-							<TranslateTransform/>
-						</TransformGroup>
-					</Button.RenderTransform>
-					<TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE7E8;" Width="25" Height="25" VerticalAlignment="Center"  HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-						<TextBlock.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform/>
-								<SkewTransform/>
-								<RotateTransform Angle="45"/>
-								<TranslateTransform/>
-							</TransformGroup>
-						</TextBlock.RenderTransform>
-						<TextBlock.ToolTip>
-							<ToolTip Background="#90008200">
-								<StackPanel>
-									<TextBlock Margin="3" Foreground="White">Выход</TextBlock>
-								</StackPanel>
-							</ToolTip>
-						</TextBlock.ToolTip>
-				</TextBlock>
+                <ToggleButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-45" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ToggleButton.RenderTransform>
+                <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockSetS}">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                    <TextBlock.ToolTip>
+                        <ToolTip Background="#90008200">
+                            <StackPanel>
+                                <TextBlock Margin="3" Foreground="White"><Run Text="Настройки" /></TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </TextBlock.ToolTip>
+                </TextBlock>
 
-				</Button>
-				<Button Template="{StaticResource ButtonT}" Style="{StaticResource ButtonToolsS}"  RenderTransformOrigin="0.5,0.5" Margin="0,0,60,60" Click="Button_Click_1">
-					<Button.RenderTransform>
-						<TransformGroup>
-							<ScaleTransform/>
-							<SkewTransform/>
-							<RotateTransform Angle="-45"/>
-							<TranslateTransform/>
-						</TransformGroup>
-					</Button.RenderTransform>
-					<TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE8B7;" Width="25" Height="25" VerticalAlignment="Center"  HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-						<TextBlock.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform/>
-								<SkewTransform/>
-								<RotateTransform Angle="45"/>
-								<TranslateTransform/>
-							</TransformGroup>
-						</TextBlock.RenderTransform>
-						<TextBlock.ToolTip>
-							<ToolTip Background="#90008200">
-								<StackPanel>
-									<TextBlock Margin="3" Foreground="White">Открыть папку сервера</TextBlock>
-								</StackPanel>
-							</ToolTip>
-						</TextBlock.ToolTip>
-				</TextBlock>
+            </ToggleButton>
+        </StackPanel>
+        <Grid Style="{StaticResource GridS}">
+            <StackPanel>
+                <TextBlock
+                    Width="320"
+                    Height="30"
+                    Margin="0,100,0,100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="25.5"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Minecraft Server Launcher"
+                    TextAlignment="Center" />
+                <Button
+                    Width="315"
+                    Height="110"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Button_Click_4"
+                    Style="{StaticResource ButtonS}"
+                    Template="{StaticResource ButtonT}">
+                    <StackPanel
+                        Width="305"
+                        Height="110"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+                        <Image
+                            Height="90"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Source="Assets/blackvariant-button-ui-requests-2-minecraft-1.ico"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="26"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="Запуск сервера" />
+                    </StackPanel>
+                </Button>
+                <Button
+                    Width="315"
+                    Height="110"
+                    Margin="0,5,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Button_Click_5"
+                    Style="{StaticResource ButtonS}"
+                    Template="{StaticResource ButtonT}">
+                    <StackPanel
+                        Width="305"
+                        Height="110"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+                        <Image
+                            Height="90"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Stretch"
+                            Source="Assets/dakirby309-simply-styled-minecraft.ico"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="26"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="Запуск игры" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
 
-				</Button>
-				<Button Template="{StaticResource ButtonT}" Style="{StaticResource ButtonToolsS}" RenderTransformOrigin="0.5,0.5" Margin="0,0,95,25" Click="Button_Click_3">
-					<Button.RenderTransform>
-						<TransformGroup>
-							<ScaleTransform/>
-							<SkewTransform/>
-							<RotateTransform Angle="-45"/>
-							<TranslateTransform/>
-						</TransformGroup>
-					</Button.RenderTransform>
-					<TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE104;" Width="25" Height="25" VerticalAlignment="Center"  HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-						<TextBlock.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform/>
-								<SkewTransform/>
-								<RotateTransform Angle="45"/>
-								<TranslateTransform/>
-							</TransformGroup>
-						</TextBlock.RenderTransform>
-						<TextBlock.ToolTip>
-							<ToolTip Background="#90008200">
-								<StackPanel>
-									<TextBlock Margin="3" Foreground="White">Редактировать настройки сервера</TextBlock>
-								</StackPanel>
-							</ToolTip>
-						</TextBlock.ToolTip>
-				</TextBlock>
+                <Button
+                    Margin="0,0,25,25"
+                    Click="Button_Click_2"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource ButtonToolsS}"
+                    Template="{StaticResource ButtonT}">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="-45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <TextBlock
+                        Width="25"
+                        Height="25"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="25"
+                        Foreground="White"
+                        RenderTransformOrigin="0.5,0.5"
+                        Text="&#xE7E8;">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.ToolTip>
+                            <ToolTip Background="#90008200">
+                                <StackPanel>
+                                    <TextBlock Margin="3" Foreground="White">Выход</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
 
-				</Button>
-				<Button Template="{StaticResource ButtonT}" Style="{StaticResource ButtonToolsS}"  RenderTransformOrigin="0.5,0.5" Margin="0,0,25,95" Click="Button_Click">
-					<Button.RenderTransform>
-						<TransformGroup>
-							<ScaleTransform/>
-							<SkewTransform/>
-							<RotateTransform Angle="-45"/>
-							<TranslateTransform/>
-						</TransformGroup>
-					</Button.RenderTransform>
-					<TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE130;" Width="25" Height="25" VerticalAlignment="Center"  HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-						<TextBlock.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform/>
-								<SkewTransform/>
-								<RotateTransform Angle="45"/>
-								<TranslateTransform/>
-							</TransformGroup>
-						</TextBlock.RenderTransform>
-						<TextBlock.ToolTip>
-							<ToolTip Background="#90008200">
-								<StackPanel>
-									<TextBlock Margin="3" Foreground="White">Выбрать .bat - файл</TextBlock>
-								</StackPanel>
-							</ToolTip>
-						</TextBlock.ToolTip>
-				</TextBlock>
-				</Button>
+                </Button>
+                <Button
+                    Margin="0,0,60,60"
+                    Click="Button_Click_1"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource ButtonToolsS}"
+                    Template="{StaticResource ButtonT}">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="-45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <TextBlock
+                        Width="25"
+                        Height="25"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="25"
+                        Foreground="White"
+                        RenderTransformOrigin="0.5,0.5"
+                        Text="&#xE8B7;">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.ToolTip>
+                            <ToolTip Background="#90008200">
+                                <StackPanel>
+                                    <TextBlock Margin="3" Foreground="White">Открыть папку сервера</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
 
-			</Grid>
-		</Grid>
-	</Grid>
+                </Button>
+                <Button
+                    Margin="0,0,95,25"
+                    Click="Button_Click_3"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource ButtonToolsS}"
+                    Template="{StaticResource ButtonT}">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="-45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <TextBlock
+                        Width="25"
+                        Height="25"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="25"
+                        Foreground="White"
+                        RenderTransformOrigin="0.5,0.5"
+                        Text="&#xE104;">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.ToolTip>
+                            <ToolTip Background="#90008200">
+                                <StackPanel>
+                                    <TextBlock Margin="3" Foreground="White">Редактировать настройки сервера</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
+
+                </Button>
+                <Button
+                    Margin="0,0,25,95"
+                    Click="Button_Click"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource ButtonToolsS}"
+                    Template="{StaticResource ButtonT}">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="-45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <TextBlock
+                        Width="25"
+                        Height="25"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontFamily="Segoe MDL2 Assets"
+                        FontSize="25"
+                        Foreground="White"
+                        RenderTransformOrigin="0.5,0.5"
+                        Text="&#xE130;">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.ToolTip>
+                            <ToolTip Background="#90008200">
+                                <StackPanel>
+                                    <TextBlock Margin="3" Foreground="White">Выбрать .bat - файл</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
+                </Button>
+
+            </Grid>
+        </Grid>
+        <Grid
+            x:Name="GridSetting"
+            Margin="60,60,60,90"
+            Background="#CC148214"
+            Style="{StaticResource GridSetting}">
+            <StackPanel Margin="5">
+
+                <Grid Margin="0,15,0,0" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource TextBlockSettings}">
+                        Путь .bat - файла:
+                    </TextBlock>
+                    <TextBox
+                        x:Name="tx1"
+                        Grid.Column="1"
+                        Margin="10,0,0,0"
+                        FontSize="9"
+                        Loaded="tx1_Loaded"
+                        Style="{StaticResource TextBoxSettings}" />
+                    <Button
+                        Grid.Column="2"
+                        Width="20"
+                        Height="16"
+                        Margin="2,0,0,3"
+                        HorizontalAlignment="Right"
+                        Click="Button_Click_6"
+                        Content="&#xE8B7;"
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="White"
+                        Style="{StaticResource ButtonToolsS}"
+                        Template="{StaticResource ButtonT}" />
+                </Grid>
+
+                <Grid Margin="0,15,0,0" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource TextBlockSettings}">
+                        Путь папки сервера:
+                    </TextBlock>
+                    <TextBox
+                        x:Name="tx2"
+                        Grid.Column="1"
+                        Margin="10,0,0,0"
+                        FontSize="9"
+                        Loaded="tx2_Loaded"
+                        Style="{StaticResource TextBoxSettings}" />
+                    <Button
+                        Grid.Column="2"
+                        Width="20"
+                        Height="16"
+                        Margin="2,0,0,3"
+                        HorizontalAlignment="Right"
+                        Click="Button_Click_7"
+                        Content="&#xE8B7;"
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="White"
+                        Style="{StaticResource ButtonToolsS}"
+                        Template="{StaticResource ButtonT}" />
+                </Grid>
+
+                <Grid Margin="0,15,0,0" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource TextBlockSettings}">
+                        Путь игры:
+                    </TextBlock>
+                    <TextBox
+                        x:Name="tx3"
+                        Grid.Column="1"
+                        Margin="10,0,0,0"
+                        FontSize="9"
+                        Loaded="tx3_Loaded"
+                        Style="{StaticResource TextBoxSettings}" />
+                    <Button
+                        Grid.Column="2"
+                        Width="20"
+                        Height="16"
+                        Margin="2,0,0,3"
+                        HorizontalAlignment="Right"
+                        Click="Button_Click_8"
+                        Content="&#xE8B7;"
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="White"
+                        Style="{StaticResource ButtonToolsS}"
+                        Template="{StaticResource ButtonT}" />
+                </Grid>
+
+                <Grid Margin="0,15,0,0" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource TextBlockSettings}">
+                        Путь файла настроек:
+                    </TextBlock>
+                    <TextBox
+                        x:Name="tx4"
+                        Grid.Column="1"
+                        Margin="10,0,0,0"
+                        FontSize="9"
+                        Loaded="tx4_Loaded"
+                        Style="{StaticResource TextBoxSettings}" />
+                    <Button
+                        Grid.Column="2"
+                        Width="20"
+                        Height="16"
+                        Margin="2,0,0,3"
+                        HorizontalAlignment="Right"
+                        Click="Button_Click_9"
+                        Content="&#xE8B7;"
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="White"
+                        Style="{StaticResource ButtonToolsS}"
+                        Template="{StaticResource ButtonT}" />
+                </Grid>
+
+            </StackPanel>
+            <Button
+                Width="auto"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Click="Button_Click_10"
+                Content="Сохранить"
+                FontWeight="Bold"
+                Foreground="White"
+                Style="{StaticResource ButtonToolsS}"
+                Template="{StaticResource ButtonT}" />
+        </Grid>
+    </Grid>
 </Window>

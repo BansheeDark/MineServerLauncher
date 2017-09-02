@@ -46,5 +46,29 @@ namespace Server_launcher.Properties {
                 this["filepath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gamepath {
+            get {
+                return ((string)(this["gamepath"]));
+            }
+            set {
+                this["gamepath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string settingspath {
+            get {
+                return ((string)(this["settingspath"]));
+            }
+            set {
+                this["settingspath"] = value;
+            }
+        }
     }
 }
