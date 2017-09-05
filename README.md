@@ -6,7 +6,6 @@ Please select your language.
 ### <a name="EN"></a> EN
 ##### The launcher has been in development.
 
-=========================
 
 ##### Manual.
 > When you first start the application, you must manually specify the path to the (.bat) file on your server. 
@@ -16,7 +15,6 @@ Please select your language.
 
 >The settings are indicated using the characteristic button.
 
-=========================
 
 + Version 0.0.1 (Alpha):
   + The ability:
@@ -28,9 +26,8 @@ Please select your language.
     + .bat file.
     + server.properties file.
     + .exe file.
-    + server directory.
-    
-=========================
+    + server directory.  
+
 
 ### WARNING
 >The launcher does not install the server and the game, please make sure that the server and the game are already installed.
@@ -38,7 +35,6 @@ Please select your language.
 ### <a name="RU"></a> RU
 ##### Лаунчер находится в разработке.
 
-=========================
 
 ##### Инструкция
 > При первом запуске приложения, необходимо вручную указать путь до (.bat) файла вашего сервера. 
@@ -48,7 +44,6 @@ Please select your language.
 
 > Настройки указываются с помощью характерной кнопки.
 
-=========================
 
 + Версия 0.0.1 (Alpha):
   + Возможности:
@@ -60,9 +55,8 @@ Please select your language.
     + (.bat) файла.
     + (server.properties) файла.
     + (.exe) файла.
-    + папки server.
-    
-=========================
+    + папки server.  
+
 
 ### ВНИМАНИЕ
 > Лаунчер не устанавливает сервер и игру, убедитесь, что сервер и игра уже установлены.
