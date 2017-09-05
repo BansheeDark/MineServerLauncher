@@ -1,14 +1,12 @@
 # Minecraft Server Launcher (Open Source)
 ***
-<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherBackG.jpg" width="50%" height="50%"/>
 
-***
 
 >Please select your language. | Пожалуйста, выберите ваш язык: [English(en-us)](#EN)  |  [Русский(ru)](#RU)
 ***
 ### <a name="EN"></a> English
 ##### The launcher has been in development.
-
+<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherEN.jpg" width="50%" height="50%"/>
 
 ##### Manual.
 > When you first start the application, you must manually specify the path to the (.bat) file on your server. 
@@ -37,7 +35,7 @@
 ***
 ### <a name="RU"></a> Русский
 ##### Лаунчер находится в разработке.
-
+<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherRU.jpg" width="50%" height="50%"/>
 
 ##### Инструкция
 > При первом запуске приложения, необходимо вручную указать путь до (.bat) файла вашего сервера. 
