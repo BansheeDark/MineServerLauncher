@@ -1,5 +1,9 @@
 # Minecraft Server Launcher (Open Source)
 ***
+<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherBackG.jpg" width="450" height="400"/>
+
+***
+
 >Please select your language. | Пожалуйста, выберите ваш язык: [EN-us](#EN)  |  [RU-ru](#RU)
 ***
 ### <a name="EN"></a> EN
