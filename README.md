@@ -8,6 +8,16 @@ Please select your language.
 
 =========================
 
+##### Manual.
+> When you first start the application, you must manually specify the path to the (.bat) file on your server. 
+> All other paths are determined automatically.
+
+>If the application does not automatically find the path to your game, then specify it manually.
+
+>The settings are indicated using the characteristic button.
+
+=========================
+
 + Version 0.0.1 (Alpha):
   + The ability:
     + to start the server using (.bat) file.
@@ -30,18 +40,28 @@ Please select your language.
 
 =========================
 
-+ Версия 0.0.1 (Альфа):
-   + Возможности:
-     + запуск сервера с помощью (.bat) файла.
-     + редактирование конфигурационного файла сервера.
-     + запуск игры с помощью (.exe) файла.
-     + быстро открыть папку сервера.
-   + Настройка путей:
-     + (.bat).
-     + (server.properties).
-     + (.exe).
-     + папки сервера.
-     
+##### Инструкция
+> При первом запуске приложения, необходимо вручную указать путь до (.bat) файла вашего сервера. 
+> Все остальные пути определятся автоматически.
+
+> Если приложение автоматически не нашло путь до вашей игры, то укажите его в ручную.
+
+> Настройки указываются с помощью характерной кнопки.
+
+=========================
+
++ Версия 0.0.1 (Alpha):
+  + Возможности:
+    + запуск сервера с помощью (.bat) файла.
+    + редактирование конфигурационного файла сервера.
+    + запуск игры с помощью (.exe) файла.
+    + быстро открыть папку сервера.
+  + Настройка пути:
+    + (.bat) файла.
+    + (server.properties) файла.
+    + (.exe) файла.
+    + папки server.
+    
 =========================
 
 ### ВНИМАНИЕ
