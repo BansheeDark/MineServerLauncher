@@ -2,7 +2,7 @@
 ***
 
 
->Please select your language. | Пожалуйста, выберите ваш язык: [English(en-us)](#EN)  |  [Русский(ru)](#RU)
+>Please select your language. | Пожалуйста, выберите ваш язык: [English(en-US)](#EN)  |  [Русский(ru-RU)](#RU)
 ***
 ### <a name="EN"></a> English
 ##### The launcher has been in development.
