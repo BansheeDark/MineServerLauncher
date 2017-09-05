@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Assets\Images\blackvariant-button-ui-requests-2-minecraft-1.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Resources\Images\blackvariant-button-ui-requests-2-minecraft-1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -115,6 +115,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Settings.cs" />
+    <Page Include="Assets\Resources\Language.ru-RU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Resources\Language.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Assets\Template.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,10 +166,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Images\blackvariant-button-ui-requests-2-minecraft-1.ico" />
+    <Resource Include="Assets\Resources\Images\blackvariant-button-ui-requests-2-minecraft-1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Images\bg_minecraft.jpg" />
+    <Resource Include="Assets\Resources\Images\bg_minecraft.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -171,7 +179,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Images\dakirby309-simply-styled-minecraft.ico" />
+    <Resource Include="Assets\Resources\Images\dakirby309-simply-styled-minecraft.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Server_launcher"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Launcher Server"
+    Title="{DynamicResource MwTitle}"
     Width="900"
     Height="700"
     MinWidth="450"
@@ -13,7 +13,7 @@
     ResizeMode="CanResize"
     mc:Ignorable="d">
     <Window.Background>
-        <ImageBrush ImageSource="Assets/Images/bg_minecraft.jpg" Stretch="UniformToFill" />
+        <ImageBrush ImageSource="Assets/Resources/Images/bg_minecraft.jpg" Stretch="UniformToFill" />
     </Window.Background>
     <Grid>
         <Grid
@@ -31,8 +31,12 @@
                     HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Disabled">
                     <FlowDocument>
-                        <Paragraph Margin="0,0,0,0">Для запуска сервера, необходимо выбрать .bat - файл, нажав на соответствующую кнопку.</Paragraph>
-                        <Paragraph Margin="0,50,0,0">Обратная связь:</Paragraph>
+                        <Paragraph Margin="0,0,0,0">
+                            <Run Text="{DynamicResource MhManual}" />
+                        </Paragraph>
+                        <Paragraph Margin="0,50,0,0">
+                            <Run Text="{DynamicResource MhFeedback}" />
+                        </Paragraph>
                         <Table Margin="5,10,0,0">
                             <Table.Columns>
                                 <TableColumn Width="100" />
@@ -52,7 +56,15 @@
                                         <Paragraph>VK:</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>vk.com/bansheedark</Paragraph>
+                                        <Paragraph>
+                                            <Hyperlink
+                                                Foreground="White"
+                                                NavigateUri="http://vk.com/bansheedark"
+                                                RequestNavigate="Hyperlink_RequestNavigate"
+                                                TextDecorations="{x:Null}">
+                                                vk.com/bansheedark
+                                            </Hyperlink>
+                                        </Paragraph>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -60,7 +72,15 @@
                                         <Paragraph>Telegram:</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>t.me/danaboldevelopment</Paragraph>
+                                        <Paragraph>
+                                            <Hyperlink
+                                                Foreground="White"
+                                                NavigateUri="http://t.me/danaboldevelopment"
+                                                RequestNavigate="Hyperlink_RequestNavigate"
+                                                TextDecorations="{x:Null}">
+                                                t.me/danaboldevelopment
+                                            </Hyperlink>
+                                        </Paragraph>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -68,7 +88,15 @@
                                         <Paragraph>Diskord:</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>discord.gg/SyduR8H</Paragraph>
+                                        <Paragraph>
+                                            <Hyperlink
+                                                Foreground="White"
+                                                NavigateUri="http://discord.gg/SyduR8H"
+                                                RequestNavigate="Hyperlink_RequestNavigate"
+                                                TextDecorations="{x:Null}">
+                                                discord.gg/SyduR8H
+                                            </Hyperlink>
+                                        </Paragraph>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -89,7 +117,7 @@
             <ToggleButton
                 x:Name="ButtonHelp"
                 Margin="25,0,0,25"
-                HorizontalAlignment="Left"         
+                HorizontalAlignment="Left"
                 RenderTransformOrigin="0.5,0.5"
                 Style="{StaticResource ToggleButtonToolsHelpS}"
                 Template="{StaticResource ToggleButtonT}">
@@ -114,7 +142,7 @@
                     <TextBlock.ToolTip>
                         <ToolTip Background="#90008200">
                             <StackPanel>
-                                <TextBlock Margin="3" Foreground="White"><Run Text="Помощь" /></TextBlock>
+                                <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwHelp}" /></TextBlock>
                             </StackPanel>
                         </ToolTip>
                     </TextBlock.ToolTip>
@@ -149,7 +177,7 @@
                     <TextBlock.ToolTip>
                         <ToolTip Background="#90008200">
                             <StackPanel>
-                                <TextBlock Margin="3" Foreground="White"><Run Text="Настройки" /></TextBlock>
+                                <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwSettings}" /></TextBlock>
                             </StackPanel>
                         </ToolTip>
                     </TextBlock.ToolTip>
@@ -168,64 +196,72 @@
                     FontSize="25.5"
                     FontWeight="Bold"
                     Foreground="White"
-                    Text="Minecraft Server Launcher"
+                    Text="{DynamicResource MwTitle}"
                     TextAlignment="Center" />
                 <Button
-                    Width="315"
-                    Height="110"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="Button_Click_4"
                     Style="{StaticResource ButtonS}"
                     Template="{StaticResource ButtonT}">
-                    <StackPanel
-                        Width="305"
+                    <Grid
+                        Width="340"
                         Height="110"
-                        Margin="10,0,0,0"
                         HorizontalAlignment="Stretch"
-                        Orientation="Horizontal">
+                        VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <Image
+                            Grid.Column="0"
                             Height="90"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
-                            Source="Assets/Images/blackvariant-button-ui-requests-2-minecraft-1.ico"
+                            Source="Assets/Resources/Images/blackvariant-button-ui-requests-2-minecraft-1.ico"
                             Stretch="UniformToFill" />
                         <TextBlock
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             FontSize="26"
                             FontWeight="Bold"
                             Foreground="White"
-                            Text="Запуск сервера" />
-                    </StackPanel>
+                            Text="{DynamicResource MwStartServer}" />
+                    </Grid>
                 </Button>
                 <Button
-                    Width="315"
-                    Height="110"
                     Margin="0,5,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="Button_Click_5"
                     Style="{StaticResource ButtonS}"
                     Template="{StaticResource ButtonT}">
-                    <StackPanel
-                        Width="305"
+                    <Grid
+                        Width="340"
                         Height="110"
-                        Margin="10,0,0,0"
                         HorizontalAlignment="Stretch"
-                        Orientation="Horizontal">
+                        VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <Image
+                            Grid.Column="0"
                             Height="90"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Stretch"
-                            Source="Assets/Images/dakirby309-simply-styled-minecraft.ico"
+                            Source="Assets/Resources/Images/dakirby309-simply-styled-minecraft.ico"
                             Stretch="UniformToFill" />
                         <TextBlock
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             FontSize="26"
                             FontWeight="Bold"
                             Foreground="White"
-                            Text="Запуск игры" />
-                    </StackPanel>
+                            Text="{DynamicResource MwStartGame}" />
+                    </Grid>
                 </Button>
             </StackPanel>
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
@@ -265,7 +301,10 @@
                         <TextBlock.ToolTip>
                             <ToolTip Background="#90008200">
                                 <StackPanel>
-                                    <TextBlock Margin="3" Foreground="White">Выход</TextBlock>
+                                    <TextBlock
+                                        Margin="3"
+                                        Foreground="White"
+                                        Text="{DynamicResource MwExit}" />
                                 </StackPanel>
                             </ToolTip>
                         </TextBlock.ToolTip>
@@ -307,7 +346,10 @@
                         <TextBlock.ToolTip>
                             <ToolTip Background="#90008200">
                                 <StackPanel>
-                                    <TextBlock Margin="3" Foreground="White">Открыть папку сервера</TextBlock>
+                                    <TextBlock
+                                        Margin="3"
+                                        Foreground="White"
+                                        Text="{DynamicResource MwDirectory}" />
                                 </StackPanel>
                             </ToolTip>
                         </TextBlock.ToolTip>
@@ -349,7 +391,10 @@
                         <TextBlock.ToolTip>
                             <ToolTip Background="#90008200">
                                 <StackPanel>
-                                    <TextBlock Margin="3" Foreground="White">Редактировать настройки сервера</TextBlock>
+                                    <TextBlock
+                                        Margin="3"
+                                        Foreground="White"
+                                        Text="{DynamicResource MwProp}" />
                                 </StackPanel>
                             </ToolTip>
                         </TextBlock.ToolTip>
@@ -391,7 +436,10 @@
                         <TextBlock.ToolTip>
                             <ToolTip Background="#90008200">
                                 <StackPanel>
-                                    <TextBlock Margin="3" Foreground="White">Выбрать .bat - файл</TextBlock>
+                                    <TextBlock
+                                        Margin="3"
+                                        Foreground="White"
+                                        Text="{DynamicResource MwBat}" />
                                 </StackPanel>
                             </ToolTip>
                         </TextBlock.ToolTip>
@@ -415,10 +463,8 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Grid.Column="0"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource TextBlockSettings}">
-                        Путь .bat - файла:
-                    </TextBlock>
+                        Style="{StaticResource TextBlockSettings}"
+                        Text="{DynamicResource MsPathbat}" />
                     <TextBox
                         x:Name="tx1"
                         Grid.Column="1"
@@ -430,7 +476,6 @@
                         Width="20"
                         Height="16"
                         Margin="2,0,0,3"
-                        HorizontalAlignment="Right"
                         Click="Button_Click_6"
                         Content="&#xE8B7;"
                         FontFamily="Segoe MDL2 Assets"
@@ -447,10 +492,8 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Grid.Column="0"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource TextBlockSettings}">
-                        Путь папки сервера:
-                    </TextBlock>
+                        Style="{StaticResource TextBlockSettings}"
+                        Text="{DynamicResource MsPathfolder}" />
                     <TextBox
                         x:Name="tx2"
                         Grid.Column="1"
@@ -479,22 +522,20 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Grid.Column="0"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource TextBlockSettings}">
-                        Путь игры:
-                    </TextBlock>
+                        Style="{StaticResource TextBlockSettings}"
+                        Text="{DynamicResource MsPathexe}" />
                     <TextBox
                         x:Name="tx3"
                         Grid.Column="1"
                         Margin="10,0,0,0"
                         Loaded="tx3_Loaded"
-                        Style="{StaticResource TextBoxSettings}" TextChanged="tx3_TextChanged" />
+                        Style="{StaticResource TextBoxSettings}"
+                        TextChanged="tx3_TextChanged" />
                     <Button
                         Grid.Column="2"
                         Width="20"
                         Height="16"
                         Margin="2,0,0,3"
-                        HorizontalAlignment="Right"
                         Click="Button_Click_8"
                         Content="&#xE8B7;"
                         FontFamily="Segoe MDL2 Assets"
@@ -511,10 +552,8 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Grid.Column="0"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource TextBlockSettings}">
-                        Путь файла настроек:
-                    </TextBlock>
+                        Style="{StaticResource TextBlockSettings}"
+                        Text="{DynamicResource MsPathprop}" />
                     <TextBox
                         x:Name="tx4"
                         Grid.Column="1"
@@ -534,14 +573,23 @@
                         Style="{StaticResource ButtonToolsS}"
                         Template="{StaticResource ButtonT}" />
                 </Grid>
-
+                <Menu
+                    Margin="-7,15,0,0"
+                    HorizontalAlignment="Left"
+                    Background="{x:Null}"
+                    FontSize="12"
+                    Foreground="White">
+                    <MenuItem
+                        x:Name="MenuLanguage"
+                        HorizontalContentAlignment="Left"
+                        Header="{DynamicResource MsLanguage}" />
+                </Menu>
             </StackPanel>
             <Button
                 Width="auto"
                 HorizontalAlignment="Stretch"
-                VerticalAlignment="Bottom"
                 Click="Button_Click_10"
-                Content="Сохранить"
+                Content="{DynamicResource MsSave}"
                 FontWeight="Bold"
                 Foreground="White"
                 Style="{StaticResource ButtonToolsS}"

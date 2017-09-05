@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
+using System.Windows.Media;
 using Server_launcher.Properties;
 using Application = System.Windows.Application;
 using MessageBox = System.Windows.MessageBox;
@@ -19,6 +20,49 @@ namespace Server_launcher
         public MainWindow()
         {
             InitializeComponent();
+
+            App.LanguageChanged += LanguageChanged;
+
+            CultureInfo currLang = App.Language;
+
+            //Заполняем меню смены языка:
+            MenuLanguage.Items.Clear();
+            foreach (var lang in App.Languages)
+            {
+                MenuItem menuLang = new MenuItem();
+                menuLang.Header = lang.DisplayName;
+                menuLang.Tag = lang;
+                menuLang.IsChecked = lang.Equals(currLang);
+                menuLang.Foreground = Brushes.Black;
+                menuLang.Click += ChangeLanguageClick;
+                MenuLanguage.Items.Add(menuLang);
+            }
+        }
+
+        private void LanguageChanged(Object sender, EventArgs e)
+        {
+            CultureInfo currLang = App.Language;
+
+            //Отмечаем нужный пункт смены языка как выбранный язык
+            foreach (MenuItem i in MenuLanguage.Items)
+            {
+                CultureInfo ci = i.Tag as CultureInfo;
+                i.IsChecked = ci != null && ci.Equals(currLang);
+            }
+        }
+
+        private void ChangeLanguageClick(Object sender, EventArgs e)
+        {
+            MenuItem mi = sender as MenuItem;
+            if (mi != null)
+            {
+                CultureInfo lang = mi.Tag as CultureInfo;
+                if (lang != null)
+                {
+                    App.Language = lang;
+                }
+            }
+
         }
 
         private void OpenFileBat()
@@ -170,7 +214,7 @@ namespace Server_launcher
 
         private void OpenDirectoryServer()
         {
-            var folderBrowser = new FolderBrowserDialog();
+            var folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
 
             var result = folderBrowser.ShowDialog();
             if(result == System.Windows.Forms.DialogResult.OK)
@@ -280,5 +324,20 @@ namespace Server_launcher
         }
 
         #endregion
+
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+                e.Handled = true;                            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Information: "+ex,"Eror", MessageBoxButton.OK, MessageBoxImage.Error);
+                throw;
+            }
+            
+        }
     }
 }

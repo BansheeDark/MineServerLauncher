@@ -1,0 +1,34 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+
+    <v:String x:Key="MwTitle">Minecraft Server Launcher</v:String>
+    <v:String x:Key="MwStartGame">Start game</v:String>
+    <v:String x:Key="MwStartServer">Start server</v:String>
+
+    <v:String x:Key="MwSettings">Settings</v:String>
+    <v:String x:Key="MwHelp">Help</v:String>
+    <v:String x:Key="MwExit">Exit</v:String>
+    <v:String x:Key="MwDirectory">Open directory server</v:String>
+    <v:String x:Key="MwBat">Select .bat file</v:String>
+    <v:String x:Key="MwProp">Edit server settings</v:String>
+
+    <v:String x:Key="MsPathbat">Path to the .bat file:</v:String>
+    <v:String x:Key="MsPathexe">Path to the game:</v:String>
+    <v:String x:Key="MsPathfolder">Path to the server:</v:String>
+    <v:String x:Key="MsPathprop">Path to the settings file :</v:String>
+    <v:String x:Key="MsLanguage">Language</v:String>
+    <v:String x:Key="MsSave">Save</v:String>
+
+    <v:String x:Key="MhManual">
+        When you first start the application, you must manually specify the path to the (.bat) file on your server. All other paths are determined automatically.
+        If the application does not automatically find the path to your game, then specify it manually.
+        The settings are indicated using the characteristic button.
+    </v:String>
+
+    <v:String x:Key="MhFeedback">Feedback:</v:String>
+
+
+</ResourceDictionary>
