@@ -13,7 +13,7 @@
     ResizeMode="CanResize"
     mc:Ignorable="d">
     <Window.Background>
-        <ImageBrush ImageSource="Assets/bg_minecraft.jpg" Stretch="UniformToFill" />
+        <ImageBrush ImageSource="Assets/Images/bg_minecraft.jpg" Stretch="UniformToFill" />
     </Window.Background>
     <Grid>
         <Grid
@@ -89,8 +89,7 @@
             <ToggleButton
                 x:Name="ButtonHelp"
                 Margin="25,0,0,25"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"         
                 RenderTransformOrigin="0.5,0.5"
                 Style="{StaticResource ToggleButtonToolsHelpS}"
                 Template="{StaticResource ToggleButtonT}">
@@ -126,7 +125,6 @@
                 x:Name="ButtonSettings"
                 Margin="25,0,0,25"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
                 RenderTransformOrigin="0.5,0.5"
                 Style="{StaticResource ToggleButtonToolsSettingsS}"
                 Template="{StaticResource ToggleButtonT}">
@@ -190,7 +188,7 @@
                             Height="90"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
-                            Source="Assets/blackvariant-button-ui-requests-2-minecraft-1.ico"
+                            Source="Assets/Images/blackvariant-button-ui-requests-2-minecraft-1.ico"
                             Stretch="UniformToFill" />
                         <TextBlock
                             VerticalAlignment="Center"
@@ -219,7 +217,7 @@
                             Height="90"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Stretch"
-                            Source="Assets/dakirby309-simply-styled-minecraft.ico"
+                            Source="Assets/Images/dakirby309-simply-styled-minecraft.ico"
                             Stretch="UniformToFill" />
                         <TextBlock
                             VerticalAlignment="Center"
