@@ -1,6 +1,6 @@
 # Minecraft Server Launcher
 
-EN-us
+#EN-us
 
 The launcher has been in development.
 
