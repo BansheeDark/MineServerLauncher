@@ -1,7 +1,6 @@
 # Minecraft Server Launcher (Open Source)
 ***
->Please select your language. | Пожалуйста, выберите ваш язык.
->[EN-us](#EN)  |  [RU-ru](#RU)
+>Please select your language. | Пожалуйста, выберите ваш язык: [EN-us](#EN)  |  [RU-ru](#RU)
 ***
 ### <a name="EN"></a> EN
 ##### The launcher has been in development.
