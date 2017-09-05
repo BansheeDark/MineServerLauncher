@@ -4,9 +4,9 @@
 
 ***
 
->Please select your language. | Пожалуйста, выберите ваш язык: [EN-us](#EN)  |  [RU-ru](#RU)
+>Please select your language. | Пожалуйста, выберите ваш язык: [English(en-us)](#EN)  |  [Русский(ru)](#RU)
 ***
-### <a name="EN"></a> EN
+### <a name="EN"></a> English
 ##### The launcher has been in development.
 
 
@@ -35,7 +35,7 @@
 ### WARNING
 >The launcher does not install the server and the game, please make sure that the server and the game are already installed.
 ***
-### <a name="RU"></a> RU
+### <a name="RU"></a> Русский
 ##### Лаунчер находится в разработке.
 
 
