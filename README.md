@@ -1,6 +1,6 @@
 # Minecraft Server Launcher (Open Source)
 ***
-<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherBackG.jpg" width="450" height="400"/>
+<img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherBackG.jpg" width="50%" height="50%"/>
 
 ***
 
