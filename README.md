@@ -5,8 +5,12 @@
 >Please select your language. | Пожалуйста, выберите ваш язык: [English(en-US)](#EN)  |  [Русский(ru-RU)](#RU)
 ***
 ### <a name="EN"></a> English
-##### The launcher has been in development.
+
+``` diff
+- The program is at an early stage of development.
+```
 <img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherEN.jpg" width="50%" height="50%"/>
+
 
 ##### Manual.
 > When you first start the application, you must manually specify the path to the (.bat) file on your server. 
@@ -34,7 +38,9 @@
 >The launcher does not install the server and the game, please make sure that the server and the game are already installed.
 ***
 ### <a name="RU"></a> Русский
-##### Лаунчер находится в разработке.
+```diff
+- Программа находится на ранней стадии разработки.
+```
 <img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherRU.jpg" width="50%" height="50%"/>
 
 ##### Инструкция
