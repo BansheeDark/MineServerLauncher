@@ -10,10 +10,10 @@ using System.Windows;
 [assembly: AssemblyTitle("Minecraft Server Launcher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DANABOL.dev")]
 [assembly: AssemblyProduct("Minecraft Server Launcher")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("@DANABOL.dev")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
@@ -49,9 +49,8 @@ using System.Windows;
 //      Редакция
 //
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
-// используя "*", как показано ниже:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// используя "*", как показано ниже
+[assembly: AssemblyVersion("0.0.1.*")]
+[assembly: AssemblyFileVersion("0.0.1")]
 [assembly: NeutralResourcesLanguage("en-US")]
 

@@ -5,12 +5,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Server_launcher"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Name="MineLaunch"
     Title="{DynamicResource MwTitle}"
     Width="900"
     Height="700"
     MinWidth="450"
     MinHeight="650"
+    MaxWidth="1000"
+    MaxHeight="800"
     ResizeMode="CanResize"
+    SizeToContent="WidthAndHeight"
     mc:Ignorable="d">
     <Window.Background>
         <ImageBrush ImageSource="Assets/Resources/Images/bg_minecraft.jpg" Stretch="UniformToFill" />
@@ -113,183 +117,32 @@
                 </FlowDocumentScrollViewer>
             </StackPanel>
         </Grid>
-        <StackPanel Orientation="Horizontal">
-            <ToggleButton
-                x:Name="ButtonHelp"
+        <Grid
+            x:Name="GridTool"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <StackPanel
                 Margin="25,0,0,25"
                 HorizontalAlignment="Left"
-                RenderTransformOrigin="0.5,0.5"
-                Style="{StaticResource ToggleButtonToolsHelpS}"
-                Template="{StaticResource ToggleButtonT}">
-
-                <ToggleButton.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform Angle="-45" />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </ToggleButton.RenderTransform>
-                <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockHelpS}">
-                    <TextBlock.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform Angle="45" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </TextBlock.RenderTransform>
-                    <TextBlock.ToolTip>
-                        <ToolTip Background="#90008200">
-                            <StackPanel>
-                                <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwHelp}" /></TextBlock>
-                            </StackPanel>
-                        </ToolTip>
-                    </TextBlock.ToolTip>
-                </TextBlock>
-
-            </ToggleButton>
-            <ToggleButton
-                x:Name="ButtonSettings"
-                Margin="25,0,0,25"
-                HorizontalAlignment="Left"
-                RenderTransformOrigin="0.5,0.5"
-                Style="{StaticResource ToggleButtonToolsSettingsS}"
-                Template="{StaticResource ToggleButtonT}">
-
-                <ToggleButton.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform Angle="-45" />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </ToggleButton.RenderTransform>
-                <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockSetS}">
-                    <TextBlock.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform Angle="45" />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </TextBlock.RenderTransform>
-                    <TextBlock.ToolTip>
-                        <ToolTip Background="#90008200">
-                            <StackPanel>
-                                <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwSettings}" /></TextBlock>
-                            </StackPanel>
-                        </ToolTip>
-                    </TextBlock.ToolTip>
-                </TextBlock>
-
-            </ToggleButton>
-        </StackPanel>
-        <Grid Style="{StaticResource GridS}">
-            <StackPanel>
-                <TextBlock
-                    Width="320"
-                    Height="30"
-                    Margin="0,100,0,100"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="25.5"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Text="{DynamicResource MwTitle}"
-                    TextAlignment="Center" />
-                <Button
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="Button_Click_4"
-                    Style="{StaticResource ButtonS}"
-                    Template="{StaticResource ButtonT}">
-                    <Grid
-                        Width="340"
-                        Height="110"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="90" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image
-                            Grid.Column="0"
-                            Height="90"
-                            HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch"
-                            Source="Assets/Resources/Images/blackvariant-button-ui-requests-2-minecraft-1.ico"
-                            Stretch="UniformToFill" />
-                        <TextBlock
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontSize="26"
-                            FontWeight="Bold"
-                            Foreground="White"
-                            Text="{DynamicResource MwStartServer}" />
-                    </Grid>
-                </Button>
-                <Button
-                    Margin="0,5,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="Button_Click_5"
-                    Style="{StaticResource ButtonS}"
-                    Template="{StaticResource ButtonT}">
-                    <Grid
-                        Width="340"
-                        Height="110"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="90" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image
-                            Grid.Column="0"
-                            Height="90"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Stretch"
-                            Source="Assets/Resources/Images/dakirby309-simply-styled-minecraft.ico"
-                            Stretch="UniformToFill" />
-                        <TextBlock
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontSize="26"
-                            FontWeight="Bold"
-                            Foreground="White"
-                            Text="{DynamicResource MwStartGame}" />
-                    </Grid>
-                </Button>
-            </StackPanel>
-            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
-
-                <Button
-                    Margin="0,0,25,25"
-                    Click="Button_Click_2"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+                <ToggleButton
+                    x:Name="ButtonHelp"
+                    Margin="0,0,15,0"
+                    HorizontalAlignment="Left"
                     RenderTransformOrigin="0.5,0.5"
-                    Style="{StaticResource ButtonToolsS}"
-                    Template="{StaticResource ButtonT}">
-                    <Button.RenderTransform>
+                    Style="{StaticResource ToggleButtonToolsHelpS}"
+                    Template="{StaticResource ToggleButtonT}">
+
+                    <ToggleButton.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform />
                             <SkewTransform />
                             <RotateTransform Angle="-45" />
                             <TranslateTransform />
                         </TransformGroup>
-                    </Button.RenderTransform>
-                    <TextBlock
-                        Width="25"
-                        Height="25"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        FontFamily="Segoe MDL2 Assets"
-                        FontSize="25"
-                        Foreground="White"
-                        RenderTransformOrigin="0.5,0.5"
-                        Text="&#xE7E8;">
+                    </ToggleButton.RenderTransform>
+                    <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockHelpS}">
                         <TextBlock.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform />
@@ -301,16 +154,170 @@
                         <TextBlock.ToolTip>
                             <ToolTip Background="#90008200">
                                 <StackPanel>
-                                    <TextBlock
-                                        Margin="3"
-                                        Foreground="White"
-                                        Text="{DynamicResource MwExit}" />
+                                    <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwHelp}" /></TextBlock>
                                 </StackPanel>
                             </ToolTip>
                         </TextBlock.ToolTip>
                     </TextBlock>
 
+                </ToggleButton>
+                <ToggleButton
+                    x:Name="ButtonSettings"
+                    Margin="15,0,0,0"
+                    HorizontalAlignment="Left"
+                    RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource ToggleButtonToolsSettingsS}"
+                    Template="{StaticResource ToggleButtonT}">
+
+                    <ToggleButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="-45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </ToggleButton.RenderTransform>
+                    <TextBlock RenderTransformOrigin="0.5,0.5" Style="{StaticResource TextBlockSetS}">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                        <TextBlock.ToolTip>
+                            <ToolTip Background="#90008200">
+                                <StackPanel>
+                                    <TextBlock Margin="3" Foreground="White"><Run Text="{DynamicResource MwSettings}" /></TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
+
+                </ToggleButton>
+
+            </StackPanel>
+            <Button
+                Margin="0,0,25,25"
+                Click="Button_Click_2"
+                RenderTransformOrigin="0.5,0.5"
+                Style="{StaticResource ButtonToolsS}"
+                Template="{StaticResource ButtonT}">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-45" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <TextBlock
+                    Width="25"
+                    Height="25"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="25"
+                    Foreground="White"
+                    RenderTransformOrigin="0.5,0.5"
+                    Text="&#xE7E8;">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="45" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                    <TextBlock.ToolTip>
+                        <ToolTip Background="#90008200">
+                            <StackPanel>
+                                <TextBlock
+                                    Margin="3"
+                                    Foreground="White"
+                                    Text="{DynamicResource MwExit}" />
+                            </StackPanel>
+                        </ToolTip>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+
+            </Button>
+        </Grid>
+        <Grid x:Name="GridLaunch" Style="{StaticResource GridS}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="35"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="{DynamicResource MwTitle}"
+                TextAlignment="Center" />
+            <StackPanel
+                Grid.Row="1"
+                MinWidth="{DynamicResource SizeWidthButton}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <Button
+                    MinWidth="{DynamicResource SizeWidthButton}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Button_Click_4"
+                    Style="{StaticResource ButtonS}"
+                    Template="{StaticResource ButtonT}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image
+                            Width="110"
+                            Height="110"
+                            Source="Assets/Resources/Images/blackvariant-button-ui-requests-2-minecraft-1.ico"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            Margin="10,0,10,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="{DynamicResource MwStartServer}" />
+                    </StackPanel>
                 </Button>
+                <Button
+                    MinWidth="{DynamicResource SizeWidthButton}"
+                    Margin="0,5,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Button_Click_5"
+                    Style="{StaticResource ButtonS}"
+                    Template="{StaticResource ButtonT}">
+                    <StackPanel MinWidth="{DynamicResource SizeWidthButton}" Orientation="Horizontal">
+                        <Image
+                            Width="110"
+                            Height="110"
+                            Source="Assets/Resources/Images/dakirby309-simply-styled-minecraft.ico"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            Margin="10,0,10,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="{DynamicResource MwStartGame}" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Grid
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom">
                 <Button
                     Margin="0,0,60,60"
                     Click="Button_Click_1"
@@ -448,6 +455,7 @@
 
             </Grid>
         </Grid>
+
         <Grid
             x:Name="GridSetting"
             Margin="60,60,60,90"
@@ -573,17 +581,10 @@
                         Style="{StaticResource ButtonToolsS}"
                         Template="{StaticResource ButtonT}" />
                 </Grid>
-                <Menu
-                    Margin="-7,15,0,0"
-                    HorizontalAlignment="Left"
-                    Background="{x:Null}"
-                    FontSize="12"
-                    Foreground="White">
-                    <MenuItem
-                        x:Name="MenuLanguage"
-                        HorizontalContentAlignment="Left"
-                        Header="{DynamicResource MsLanguage}" />
-                </Menu>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockSettings}" Text="{DynamicResource MsLanguage}" />
+                    <ComboBox x:Name="MenuLanguage" Style="{StaticResource ComboBoxLangS}" />
+                </StackPanel>
             </StackPanel>
             <Button
                 Width="auto"

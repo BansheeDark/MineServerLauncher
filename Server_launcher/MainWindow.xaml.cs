@@ -20,22 +20,22 @@ namespace Server_launcher
         public MainWindow()
         {
             InitializeComponent();
-
+            MineLaunch.Title = MineLaunch.Title +" v."+ System.Reflection.Assembly.GetExecutingAssembly().GetName().Version+"(Alpha)";
             App.LanguageChanged += LanguageChanged;
-
             CultureInfo currLang = App.Language;
 
             //Заполняем меню смены языка:
             MenuLanguage.Items.Clear();
             foreach (var lang in App.Languages)
             {
-                MenuItem menuLang = new MenuItem();
-                menuLang.Header = lang.DisplayName;
-                menuLang.Tag = lang;
-                menuLang.IsChecked = lang.Equals(currLang);
-                menuLang.Foreground = Brushes.Black;
-                menuLang.Click += ChangeLanguageClick;
-                MenuLanguage.Items.Add(menuLang);
+
+                ComboBoxItem menuBoxItem = new ComboBoxItem();
+                menuBoxItem.Tag = lang;
+                menuBoxItem.Content = lang.DisplayName;
+                menuBoxItem.Foreground = Brushes.Black;
+                menuBoxItem.Selected += ChangeLanguageClick;
+                menuBoxItem.IsSelected = lang.Equals(currLang);
+                MenuLanguage.Items.Add(menuBoxItem);
             }
         }
 
@@ -44,17 +44,16 @@ namespace Server_launcher
             CultureInfo currLang = App.Language;
 
             //Отмечаем нужный пункт смены языка как выбранный язык
-            foreach (MenuItem i in MenuLanguage.Items)
+            foreach (ComboBoxItem i in MenuLanguage.Items)
             {
                 CultureInfo ci = i.Tag as CultureInfo;
-                i.IsChecked = ci != null && ci.Equals(currLang);
+                i.IsSelected = ci != null && ci.Equals(currLang);
             }
         }
 
         private void ChangeLanguageClick(Object sender, EventArgs e)
         {
-            MenuItem mi = sender as MenuItem;
-            if (mi != null)
+            if (sender is ComboBoxItem mi)
             {
                 CultureInfo lang = mi.Tag as CultureInfo;
                 if (lang != null)
@@ -167,7 +166,7 @@ namespace Server_launcher
         private void StartGame()
         {
             var gamepathdef1 = @"%AppData%\Roaming\.minecraft\launcher.jar";
-            var gamepathdef2 = @"C:\Program Files (x86)\Minecrft\MinecraftLauncher.exe";
+            var gamepathdef2 = @"C:\Program Files (x86)\Minecraft\MinecraftLauncher.exe";
             if (File.Exists(gamepathdef1))
             {
                 Settings.Default.gamepath = gamepathdef1;
