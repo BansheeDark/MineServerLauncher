@@ -1,9 +1,9 @@
 # Minecraft Server Launcher (Open Source)
 ***
 Download application:
-[Launcher](https://goo.gl/APAHpX "Application link")
+[Launcher](https://goo.gl/tFC7BU "Application link")
 
-Скачать приложение: [Launcher](https://goo.gl/APAHpX "Application link")
+Скачать приложение: [Лаунчер](https://goo.gl/tFC7BU "Application link")
 ***
 >Please select your language. | Пожалуйста, выберите ваш язык: [English(en-US)](#EN)  |  [Русский(ru-RU)](#RU)
 ***
