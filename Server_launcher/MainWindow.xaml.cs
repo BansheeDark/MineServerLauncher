@@ -23,7 +23,7 @@ namespace Server_launcher
             MineLaunch.Title = MineLaunch.Title +" v."+ System.Reflection.Assembly.GetExecutingAssembly().GetName().Version+"(Alpha)";
             App.LanguageChanged += LanguageChanged;
             CultureInfo currLang = App.Language;
-
+            StartGame(false);
             //Заполняем меню смены языка:
             MenuLanguage.Items.Clear();
             foreach (var lang in App.Languages)
@@ -106,6 +106,7 @@ namespace Server_launcher
 
             else
                 MessageBox.Show("Чтобы открыть папку, необходимо задать её путь.");
+            OpenDirectoryServer();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -129,6 +130,7 @@ namespace Server_launcher
             else
             {
                 MessageBox.Show("Чтобы открыть файл, необходимо задать его путь.");
+                OpenFileSettings();
             }
         }
 
@@ -144,6 +146,7 @@ namespace Server_launcher
             else
             {
                 MessageBox.Show("Чтобы запустить сервер, необходимо задать его путь.");
+                OpenFileBat();
             }
         }
 
@@ -160,16 +163,18 @@ namespace Server_launcher
             else
             {
                 MessageBox.Show("Файл запуска игры не найден. Для запуска игры, необходимо указать путь в настройках.");
+                OpenFileGame();
             }
         }
 
-        private void StartGame()
+        private void StartGame(bool check)
         {
             var gamepathdef1 = @"%AppData%\Roaming\.minecraft\launcher.jar";
             var gamepathdef2 = @"C:\Program Files (x86)\Minecraft\MinecraftLauncher.exe";
             if (File.Exists(gamepathdef1))
             {
                 Settings.Default.gamepath = gamepathdef1;
+                if(check)
                 ProcessStartGame();
             }
             else
@@ -177,19 +182,20 @@ namespace Server_launcher
                 if (File.Exists(gamepathdef2))
                 {
                     Settings.Default.gamepath = gamepathdef2;
-
-                    ProcessStartGame();
+                    if (check)
+                        ProcessStartGame();
                 }
                 else
                 {
-                    ProcessStartGame();
+                    if (check)
+                        ProcessStartGame();
                 }
             }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            StartGame();
+            StartGame(true);
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
