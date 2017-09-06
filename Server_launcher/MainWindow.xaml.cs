@@ -105,8 +105,10 @@ namespace Server_launcher
                 Process.Start(new ProcessStartInfo("explorer.exe", Settings.Default.directoryName));
 
             else
+            {
                 MessageBox.Show("Чтобы открыть папку, необходимо задать её путь.");
-            OpenDirectoryServer();
+                OpenDirectoryServer();
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
