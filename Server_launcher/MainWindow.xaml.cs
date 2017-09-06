@@ -80,6 +80,8 @@ namespace Server_launcher
                     Settings.Default.filepath = openFileDialog1.FileName;
                     Settings.Default.directoryName = Path.GetDirectoryName(Settings.Default.filepath);
                     tx1.Text = Settings.Default.filepath;
+                    tx2.Text = Settings.Default.directoryName;
+                    tx4.Text = Settings.Default.directoryName + "\\server.properties";
                 }
                 catch (Exception ex)
                 {

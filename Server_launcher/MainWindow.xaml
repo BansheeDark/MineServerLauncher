@@ -581,9 +581,12 @@
                         Style="{StaticResource ButtonToolsS}"
                         Template="{StaticResource ButtonT}" />
                 </Grid>
-                <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                <StackPanel Margin="0,15,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockSettings}" Text="{DynamicResource MsLanguage}" />
-                    <ComboBox x:Name="MenuLanguage" Margin="15,0,0,0" Style="{StaticResource ComboBoxLangS}" />
+                    <ComboBox
+                        x:Name="MenuLanguage"
+                        Margin="15,0,0,0"
+                        Style="{StaticResource ComboBoxLangS}" />
                 </StackPanel>
             </StackPanel>
             <Button
