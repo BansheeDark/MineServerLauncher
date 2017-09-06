@@ -20,7 +20,7 @@
     <v:String x:Key="MsPathexe">Путь игры:</v:String>
     <v:String x:Key="MsPathfolder">Путь сервера:</v:String>
     <v:String x:Key="MsPathprop">Путь файла настроек:</v:String>
-    <v:String x:Key="MsLanguage">Язык</v:String>
+    <v:String x:Key="MsLanguage">Язык:</v:String>
     <v:String x:Key="MsSave">Сохранить</v:String>
 
     <v:String x:Key="MhManual">

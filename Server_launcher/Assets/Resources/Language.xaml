@@ -20,7 +20,7 @@
     <v:String x:Key="MsPathexe">Path to the game:</v:String>
     <v:String x:Key="MsPathfolder">Path to the server:</v:String>
     <v:String x:Key="MsPathprop">Path to the settings file :</v:String>
-    <v:String x:Key="MsLanguage">Language</v:String>
+    <v:String x:Key="MsLanguage">Language:</v:String>
     <v:String x:Key="MsSave">Save</v:String>
 
     <v:String x:Key="MhManual">
