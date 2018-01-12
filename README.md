@@ -1,17 +1,15 @@
 # Minecraft Server Launcher (Open Source)
 ***
 Download application:
-[Launcher](https://goo.gl/tFC7BU "Application link")
+[Launcher](https://1drv.ms/u/s!AhBZzkHJVTtGpn3BBlGVxB4pA3Gm "Application link")
 
-Скачать приложение: [Лаунчер](https://goo.gl/tFC7BU "Application link")
+Скачать приложение: [Лаунчер](https://1drv.ms/u/s!AhBZzkHJVTtGpn3BBlGVxB4pA3Gm "Application link")
 ***
 >Please select your language. | Пожалуйста, выберите ваш язык: [English(en-US)](#EN)  |  [Русский(ru-RU)](#RU)
 ***
 ### <a name="EN"></a> English
 
-``` diff
-- The program is at an early stage of development.
-```
+
 <img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherEN.jpg" width="50%" height="50%"/>
 
 
@@ -41,9 +39,7 @@ The settings are indicated using the characteristic button.
 >The launcher does not install the server and the game, please make sure that the server and the game are already installed.
 ***
 ### <a name="RU"></a> Русский
-```diff
-- Программа находится на ранней стадии разработки.
-```
+
 <img src="https://github.com/BansheeDark/MinecraftServerLauncher/blob/master/LauncherRU.jpg" width="50%" height="50%"/>
 
 ##### Инструкция
