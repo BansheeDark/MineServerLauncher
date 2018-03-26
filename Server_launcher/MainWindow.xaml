@@ -63,10 +63,10 @@
                                         <Paragraph>
                                             <Hyperlink
                                                 Foreground="White"
-                                                NavigateUri="http://vk.com/bansheedark"
+                                                NavigateUri="https://vk.com/yekitksv"
                                                 RequestNavigate="Hyperlink_RequestNavigate"
                                                 TextDecorations="{x:Null}">
-                                                vk.com/bansheedark
+                                                vk.com/yekitksv
                                             </Hyperlink>
                                         </Paragraph>
                                     </TableCell>
@@ -79,10 +79,10 @@
                                         <Paragraph>
                                             <Hyperlink
                                                 Foreground="White"
-                                                NavigateUri="http://t.me/danaboldevelopment"
+                                                NavigateUri="https://t.me/YekitKsv"
                                                 RequestNavigate="Hyperlink_RequestNavigate"
                                                 TextDecorations="{x:Null}">
-                                                t.me/danaboldevelopment
+                                                t.me/YekitKsv
                                             </Hyperlink>
                                         </Paragraph>
                                     </TableCell>
@@ -108,7 +108,7 @@
                                         <Paragraph>Email:</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>nickitakrac@gmail.com</Paragraph>
+                                        <Paragraph>yekitksv@gmail.com</Paragraph>
                                     </TableCell>
                                 </TableRow>
                             </TableRowGroup>
